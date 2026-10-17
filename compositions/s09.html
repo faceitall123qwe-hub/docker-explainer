@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pl">
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+#s09-root { position:absolute; inset:0; }
+#s09-root .stage { position:absolute; inset:0; }
+#s09-root .hd { position:absolute; left:140px; top:96px; }
+#s09-root .term { left:140px; top:270px; width:680px; height:500px; }
+#s09-root .term .body { font-size:50px; }
+#s09-root .sv { left:960px; width:820px; height:150px; display:flex; align-items:center; gap:28px; padding:0 40px; color:var(--muted); }
+#s09-root .sv > .ic { width:56px; height:56px; stroke-width:1.5; }
+#s09-root .sv .lb { color:var(--text); }
+#s09-root .sv .stt { margin-left:auto; display:flex; align-items:center; gap:14px; color:var(--green); }
+#s09-root .sv .stt i { display:block; width:18px; height:18px; border-radius:50%; background:var(--green); }
+#s09-root .sv0 { top:270px; }
+#s09-root .sv1 { top:445px; }
+#s09-root .sv2 { top:620px; }
+#s09-root .cmd { left:140px; top:840px; height:100px; display:flex; align-items:center; padding:0 40px; font-size:52px; }
+
+      </style>
+      <div id="s09-root" data-composition-id="s09" data-width="1920" data-height="1080">
+        <div class="stage">
+
+<h1 class="hd">Wiele kontenerów: <span class="g">Compose</span></h1>
+<div class="term"><div class="bar"><i></i><i></i><i></i><span class="mono muted">compose.yml</span></div>
+<div class="body"><div class="mono y">services:</div><div class="mono y0">&nbsp;&nbsp;web:</div><div class="mono y1">&nbsp;&nbsp;db:</div><div class="mono y2">&nbsp;&nbsp;cache:</div></div></div>
+<div class="card sv sv0"><svg class="ic " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" /> <path d="M2 12h20" /> </svg> <span class="lb">strona</span><span class="stt mono"><i></i>działa</span></div>
+<div class="card sv sv1"><svg class="ic " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <ellipse cx="12" cy="5" rx="9" ry="3" /> <path d="M3 5V19A9 3 0 0 0 21 19V5" /> <path d="M3 12A9 3 0 0 0 21 12" /> </svg> <span class="lb">baza danych</span><span class="stt mono"><i></i>działa</span></div>
+<div class="card sv sv2"><svg class="ic " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" /> </svg> <span class="lb">cache</span><span class="stt mono"><i></i>działa</span></div>
+<div class="card cmd mono"><span class="g">$</span>&nbsp;<span class="ch">d</span><span class="ch">o</span><span class="ch">c</span><span class="ch">k</span><span class="ch">e</span><span class="ch">r</span><span class="ch">&nbsp;</span><span class="ch">c</span><span class="ch">o</span><span class="ch">m</span><span class="ch">p</span><span class="ch">o</span><span class="ch">s</span><span class="ch">e</span><span class="ch">&nbsp;</span><span class="ch">u</span><span class="ch">p</span></div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          var R = "#s09-root ";
+          var $ = function (s) { return R + s; };
+          var V = function (w) { return w + 0.3; };
+          var E = "power3.out", IO = "power2.inOut";
+          var tl = gsap.timeline({ paused: true });
+          function type(sel, t, step) {
+            var els = document.querySelectorAll(R + sel + " .ch");
+            for (var i = 0; i < els.length; i++) tl.set(els[i], { display: "inline" }, t + i * (step || 0.045));
+          }
+          function draw(sel, t, d) {
+            tl.fromTo($(sel), { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d || 0.5, ease: "power2.out" }, t);
+          }
+          tl.fromTo($(".stage"), { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.5, ease: "power2.out" }, 0);
+tl.fromTo($(".hd"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 0.2);
+tl.fromTo($(".term"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(0.3));
+tl.fromTo($(".sv0"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(2.1));
+tl.fromTo($(".y0"), { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.4, ease: E }, V(2.1));
+tl.fromTo($(".sv1"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(2.84));
+tl.fromTo($(".y1"), { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.4, ease: E }, V(2.84));
+tl.fromTo($(".sv2"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(3.56));
+tl.fromTo($(".y2"), { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.4, ease: E }, V(3.56));
+tl.set($(".stt"), { opacity: 0 }, 0);
+tl.fromTo($(".cmd"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(4.7));
+type(".cmd", V(5.0), 0.045);
+tl.to($(".stt"), { opacity: 1, duration: 0.4, stagger: 0.2 }, V(6.0));
+tl.to($(".sv"), { borderColor: "rgba(62,224,143,.45)", duration: 0.4, stagger: 0.2 }, V(6.0));
+
+          tl.to($(".stage"), { opacity: 0, filter: "blur(6px)", y: -10, duration: 0.4, ease: "power2.inOut" }, 7.85);
+          window.__timelines["s09"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

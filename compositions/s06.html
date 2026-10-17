@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pl">
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+#s06-root { position:absolute; inset:0; }
+#s06-root .stage { position:absolute; inset:0; }
+#s06-root .hd { position:absolute; left:140px; top:96px; }
+#s06-root .df { left:140px; top:410px; width:300px; height:240px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; color:var(--muted); }
+#s06-root .df .ic { width:64px; height:64px; stroke-width:1.4; }
+#s06-root .df .mono { color:var(--text); }
+#s06-root .im { left:590px; top:360px; width:510px; height:340px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; color:var(--yellow); border-color:rgba(245,197,24,.5); }
+#s06-root .im > .ic { width:84px; height:84px; stroke-width:1.3; }
+#s06-root .im .lb { color:var(--text); font-size:54px; font-weight:600; }
+#s06-root .im .ro { display:flex; align-items:center; gap:12px; color:var(--muted); }
+#s06-root .im .ro .ic { width:36px; height:36px; stroke-width:1.8; }
+#s06-root .co { left:1260px; width:520px; height:160px; display:flex; align-items:center; gap:24px; padding:0 40px; color:var(--green); border-color:rgba(62,224,143,.4); }
+#s06-root .co .ic { width:56px; height:56px; stroke-width:1.5; }
+#s06-root .co0 { top:270px; }
+#s06-root .co1 { top:490px; }
+#s06-root .co2 { top:710px; }
+#s06-root .lbl { position:absolute; color:var(--yellow); }
+#s06-root .lb1 { left:449px; top:450px; } #s06-root .lb2 { left:1118px; top:376px; }
+#s06-root .ck { position:absolute; left:140px; top:880px; display:flex; align-items:center; gap:20px; color:var(--muted); }
+#s06-root .ck .ic { width:52px; height:52px; color:var(--yellow); stroke-width:1.6; }
+
+      </style>
+      <div id="s06-root" data-composition-id="s06" data-width="1920" data-height="1080">
+        <div class="stage">
+
+<h1 class="hd">Obraz i <span class="g">kontenery</span></h1>
+<svg class="wire" viewBox="0 0 1920 1080">
+  <path class="w0" pathLength="1" d="M440 530 L590 530"/>
+  <path class="wc wc0" pathLength="1" d="M1100 530 C 1180 530, 1180 350, 1260 350"/><path class="wc wc1" pathLength="1" d="M1100 530 C 1180 530, 1180 570, 1260 570"/><path class="wc wc2" pathLength="1" d="M1100 530 C 1180 530, 1180 790, 1260 790"/>
+</svg>
+<div class="card df"><svg class="ic " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /> <path d="M10 9H8" /> <path d="M16 13H8" /> <path d="M16 17H8" /> </svg> <span class="mono">Dockerfile</span></div>
+<div class="card im"><svg class="ic " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /> <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /> <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /> </svg> <span class="lb">obraz</span><span class="ro lb"><svg class="ic " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="18" height="11" x="3" y="11" rx="2" ry="2" /> <path d="M7 11V7a5 5 0 0 1 10 0v4" /> </svg> tylko do odczytu</span></div>
+<div class="card co co0"><svg class="ic " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" /> <path d="m3.3 7 8.7 5 8.7-5" /> <path d="M12 22V12" /> </svg> <span class="lb">kontener 1</span></div>
+<div class="card co co1"><svg class="ic " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" /> <path d="m3.3 7 8.7 5 8.7-5" /> <path d="M12 22V12" /> </svg> <span class="lb">kontener 2</span></div>
+<div class="card co co2"><svg class="ic " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" /> <path d="m3.3 7 8.7 5 8.7-5" /> <path d="M12 22V12" /> </svg> <span class="lb">kontener 3</span></div>
+<div class="lbl lb1 mono">build</div><div class="lbl lb2 mono">run</div>
+<div class="ck lb"><svg class="ic " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M11 17h.01" /> <path d="M11.496 2c.324-.016.558.292.529.615a4 4 0 004.235 4.368.713.713 0 01.758.757 4 4 0 004.366 4.237c.323-.03.63.204.614.527a10 10 0 01-2.915 6.566A1 1 0 114.93 4.918 10 10 0 0111.496 2" /> <path d="M12 12h.01" /> <path d="M16 16h.01" /> <path d="M16 3h.01" /> <path d="M21 4h.01" /> <path d="M21 8h.01" /> <path d="M7 14h.01" /> <path d="M9 8h.01" /> </svg> <span>jedna foremka, wiele ciastek</span></div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          var R = "#s06-root ";
+          var $ = function (s) { return R + s; };
+          var V = function (w) { return w + 0.3; };
+          var E = "power3.out", IO = "power2.inOut";
+          var tl = gsap.timeline({ paused: true });
+          function type(sel, t, step) {
+            var els = document.querySelectorAll(R + sel + " .ch");
+            for (var i = 0; i < els.length; i++) tl.set(els[i], { display: "inline" }, t + i * (step || 0.045));
+          }
+          function draw(sel, t, d) {
+            tl.fromTo($(sel), { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d || 0.5, ease: "power2.out" }, t);
+          }
+          tl.fromTo($(".stage"), { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.5, ease: "power2.out" }, 0);
+tl.fromTo($(".hd"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 0.2);
+tl.fromTo($(".df"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(0.2));
+draw(".w0", V(0.8), 0.4);
+tl.fromTo($(".lb1"), { opacity: 0 }, { opacity: 1, duration: 0.4 }, V(0.8));
+tl.fromTo($(".im"), { opacity: 0, scale: 0.95 }, { opacity: 1, scale: 1, duration: 0.6, ease: E }, V(1.07));
+tl.fromTo($(".im .ro"), { opacity: 0 }, { opacity: 1, duration: 0.5 }, V(2.2));
+tl.fromTo($(".lb2"), { opacity: 0 }, { opacity: 1, duration: 0.4 }, V(4.6));
+draw(".wc0", V(4.7) + 0 * 0.2, 0.45);
+tl.fromTo($(".co0"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(5.0) + 0 * 0.2);
+draw(".wc1", V(4.7) + 1 * 0.2, 0.45);
+tl.fromTo($(".co1"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(5.0) + 1 * 0.2);
+draw(".wc2", V(4.7) + 2 * 0.2, 0.45);
+tl.fromTo($(".co2"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(5.0) + 2 * 0.2);
+tl.fromTo($(".ck"), { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(6.2));
+
+          tl.to($(".stage"), { opacity: 0, filter: "blur(6px)", y: -10, duration: 0.4, ease: "power2.inOut" }, 8.25);
+          window.__timelines["s06"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

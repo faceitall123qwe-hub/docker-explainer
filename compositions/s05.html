@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pl">
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+#s05-root { position:absolute; inset:0; }
+#s05-root .stage { position:absolute; inset:0; }
+#s05-root .hd { position:absolute; left:140px; top:96px; }
+#s05-root .term { left:240px; top:250px; width:1440px; height:560px; }
+#s05-root .term .body { gap:0; padding-top:30px; }
+#s05-root .dl { display:flex; align-items:center; height:84px; font-size:50px; }
+#s05-root .dl .k { width:280px; color:var(--yellow); }
+#s05-root .dl .a { margin-left:auto; color:var(--muted); }
+#s05-root .dl .mono { font-size:50px; }
+
+      </style>
+      <div id="s05-root" data-composition-id="s05" data-width="1920" data-height="1080">
+        <div class="stage">
+
+<h1 class="hd">Przepis: <span class="g">Dockerfile</span></h1>
+<div class="term"><div class="bar"><i></i><i></i><i></i><span class="mono muted">Dockerfile</span></div>
+<div class="body"><div class="dl d0"><span class="mono k">FROM</span><span class="mono">node:20</span><span class="lb a">obraz bazowy</span></div><div class="dl d1"><span class="mono k">WORKDIR</span><span class="mono">/app</span><span class="lb a"></span></div><div class="dl d2"><span class="mono k">COPY</span><span class="mono">.&nbsp;.</span><span class="lb a">kopiuj kod</span></div><div class="dl d3"><span class="mono k">RUN</span><span class="mono">npm&nbsp;install</span><span class="lb a">instaluj</span></div><div class="dl d4"><span class="mono k">CMD</span><span class="mono">["node",&nbsp;"app.js"]</span><span class="lb a">uruchom</span></div></div></div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          var R = "#s05-root ";
+          var $ = function (s) { return R + s; };
+          var V = function (w) { return w + 0.3; };
+          var E = "power3.out", IO = "power2.inOut";
+          var tl = gsap.timeline({ paused: true });
+          function type(sel, t, step) {
+            var els = document.querySelectorAll(R + sel + " .ch");
+            for (var i = 0; i < els.length; i++) tl.set(els[i], { display: "inline" }, t + i * (step || 0.045));
+          }
+          function draw(sel, t, d) {
+            tl.fromTo($(sel), { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d || 0.5, ease: "power2.out" }, t);
+          }
+          tl.fromTo($(".stage"), { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.5, ease: "power2.out" }, 0);
+tl.fromTo($(".hd"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 0.2);
+tl.fromTo($(".term"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(1.5));
+tl.fromTo($(".d0"), { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: E }, V(2.68));
+tl.fromTo($(".d1"), { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: E }, V(3));
+tl.fromTo($(".d2"), { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: E }, V(4.12));
+tl.fromTo($(".d3"), { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: E }, V(4.93));
+tl.fromTo($(".d4"), { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: E }, V(5.7));
+
+          tl.to($(".stage"), { opacity: 0, filter: "blur(6px)", y: -10, duration: 0.4, ease: "power2.inOut" }, 6.75);
+          window.__timelines["s05"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

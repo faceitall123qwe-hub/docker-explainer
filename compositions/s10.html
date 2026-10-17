@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pl">
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+#s10-root { position:absolute; inset:0; }
+#s10-root .stage { position:absolute; inset:0; }
+
+#s10-root .ls { position:absolute; inset:0; }
+#s10-root .pl { top:250px; width:380px; height:240px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:22px; color:var(--green); }
+#s10-root .pl .ic { width:80px; height:80px; stroke-width:1.5; }
+#s10-root .pl .lb { color:var(--text); font-size:52px; font-weight:600; }
+#s10-root .p0 { left:140px; }
+#s10-root .p1 { left:560px; }
+#s10-root .p2 { left:980px; }
+#s10-root .p3 { left:1400px; }
+#s10-root .ft { position:absolute; left:140px; top:600px; font-size:108px; }
+#s10-root .fin { position:absolute; inset:0; }
+#s10-root .fh { position:absolute; left:0; right:0; top:170px; text-align:center; font-size:104px; }
+#s10-root .term { left:420px; top:360px; width:1080px; height:280px; }
+#s10-root .term .body { font-size:52px; }
+#s10-root .out { color:var(--green); }
+
+      </style>
+      <div id="s10-root" data-composition-id="s10" data-width="1920" data-height="1080">
+        <div class="stage">
+
+<div class="ls">
+<div class="card pl p0"><svg class="ic " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /> <path d="M12 22V12" /> <polyline points="3.29 7 12 12 20.71 7" /> <path d="m7.5 4.27 9 5.15" /> </svg> <span class="lb">Obraz</span></div>
+<div class="card pl p1"><svg class="ic " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" /> <path d="m3.3 7 8.7 5 8.7-5" /> <path d="M12 22V12" /> </svg> <span class="lb">Kontener</span></div>
+<div class="card pl p2"><svg class="ic " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /> <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /> <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /> </svg> <span class="lb">Warstwy</span></div>
+<div class="card pl p3"><svg class="ic " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" /> </svg> <span class="lb">Rejestr</span></div>
+<h1 class="hd ft">Tak działa <span class="g">Docker</span></h1>
+</div>
+<div class="fin">
+  <h1 class="hd fh">Spróbuj <span class="g">sam</span></h1>
+  <div class="term"><div class="bar"><i></i><i></i><i></i><span class="mono muted">terminal</span></div>
+    <div class="body"><div class="mono k0"><span class="g">$</span> <span class="ch">d</span><span class="ch">o</span><span class="ch">c</span><span class="ch">k</span><span class="ch">e</span><span class="ch">r</span><span class="ch">&nbsp;</span><span class="ch">r</span><span class="ch">u</span><span class="ch">n</span><span class="ch">&nbsp;</span><span class="ch">h</span><span class="ch">e</span><span class="ch">l</span><span class="ch">l</span><span class="ch">o</span><span class="ch">-</span><span class="ch">w</span><span class="ch">o</span><span class="ch">r</span><span class="ch">l</span><span class="ch">d</span></div><div class="mono out">Hello from Docker!</div></div></div>
+</div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          var R = "#s10-root ";
+          var $ = function (s) { return R + s; };
+          var V = function (w) { return w + 0.3; };
+          var E = "power3.out", IO = "power2.inOut";
+          var tl = gsap.timeline({ paused: true });
+          function type(sel, t, step) {
+            var els = document.querySelectorAll(R + sel + " .ch");
+            for (var i = 0; i < els.length; i++) tl.set(els[i], { display: "inline" }, t + i * (step || 0.045));
+          }
+          function draw(sel, t, d) {
+            tl.fromTo($(sel), { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d || 0.5, ease: "power2.out" }, t);
+          }
+          tl.fromTo($(".stage"), { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.5, ease: "power2.out" }, 0);
+
+tl.fromTo($(".p0"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(0.1));
+tl.fromTo($(".p1"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(0.82));
+tl.fromTo($(".p2"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(1.6));
+tl.fromTo($(".p3"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(2.24));
+tl.fromTo($(".ft"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, V(3.5));
+tl.to($(".ls"), { opacity: 0, filter: "blur(8px)", duration: 0.5, ease: "power2.inOut" }, V(4.9));
+tl.fromTo($(".fh"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, V(5.3));
+tl.fromTo($(".term"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(5.8));
+type(".k0", V(6.5), 0.045);
+tl.fromTo($(".out"), { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, V(7.8));
+
+          tl.to($(".stage"), { opacity: 0, filter: "blur(6px)", y: -10, duration: 0.85, ease: "power2.inOut" }, 9.60);
+          window.__timelines["s10"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>
